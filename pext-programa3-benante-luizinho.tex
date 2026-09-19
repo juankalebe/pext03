@@ -1,0 +1,386 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Projeto de Extensão da disciplina de Programação 3
+% Sub-projeto do ProgramAuto
+% Autores:
+%     Prof. Dr. Ruben Carlo Benante
+%     Nome do Aluno 1
+%     Nome do Aluno 2
+%
+% Data: 2026-09-20
+%
+% Assunto: Bibliotecas graficas, IHM, GTK, Ogre, QT, QMake e Make
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para gerar o PDF use uma das 2 opções abaixo:
+%
+% Opção 1: com makefile, comando único.
+%    $ make ext-programaX-benante-sobrenome1-sobrenome2.pdf
+%
+% Opção 2: com os 3 comandos diretamente:
+%    $ pdflatex pext-programaX-benante-sobrenome1-sobrenome2.tex -o pext-programaX-benante-sobrenome1-sobrenome2.pdf
+%    $ bibtex biblio
+%    $ pdflatex pext-programaX-benante-sobrenome1-sobrenome2.tex -o pext-programaX-benante-sobrenome1-sobrenome2.pdf
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% preambulo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,12pt]{article} %twocolumn
+\usepackage[left=2.5cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc} % letras acentuadas
+\usepackage[portuguese]{babel} % tradução de títulos
+\usepackage[colorlinks]{hyperref}
+\usepackage{algorithm} % ambiente para índice de algoritmos
+\usepackage{algpseudocode} % fonte e estilo do algoritmo
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{url}
+% \usepackage{natbib}
+%[noend]
+
+\DeclareUrlCommand\email{\urlstyle{mm}} % comando para email bonito
+\floatname{algorithm}{Algoritmo} % tradução da palavra algorítimo no ambiente de índice
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% capa %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Programa 3: Interface Pessoa-Maquina com C++}
+\author{Ruben Carlo Benante \\ Autor2 \\ Autor3}
+
+\begin{document}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% resumo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+
+\textbf{Assunto:} Ensino da Linguagem de Programação \texttt{C} / \texttt{CPP}.
+
+% descrever em poucas palavras seu projeto aqui
+Este projeto de extensao aborda o ensino e desenvolvimento de interfaces pessoa-maquina abordando bibliotecas graficas e compilacao de softwares em C++. Por meio de seis videos educativos, visa-se capacitar a comunidade academica na construcao de softwares visuais.
+
+\textbf{Local:} Escola Politécnica de Pernambuco - UPE/POLI
+
+\textbf{Órgão Financiador:} N/A
+
+\textbf{Caracterização:} Projeto de Extensão requisito da disciplina de DCExt Programação 3, sub-projeto integrante do Projeto \texttt{ProgramAuto}
+
+% Este é o fim do resumo.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% artigo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% seção de introdução %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introdução}
+
+% Descrever melhor seu projeto aqui
+
+O ensino da Linguagem de Programação \texttt{C} / \texttt{CPP} expandiu-se da manipulacao em linha de comando para a construcao de sistemas visuais interativos e graficos de alto desempenho.
+
+Diante do desafio de projetar interfaces homem-maquina (IHM) responsivas e acessiveis, torna-se essencial orientar os estudantes na escolha das ferramentas adequadas, diferenciando bibliotecas focadas em multimida/jogos de frameworks voltados a aplicacoes industriais.\ldots
+
+O ambiente em C++ abrange desde o controle de baixo nivel de janelas ate a automacao do fluxo de compilacao com QMake e Make. \ldots
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% seção de objetivos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+
+%Descrever o objetivo geral a ser alcançado
+
+Criação e divulgacao de seis videos instrucionais focados no ensino de bibliotecas graficas em C++, cobrindo o ciclo completo desde os conceitos ate a automacao de build de aplicacoes Qt com arquivos \texttt{.ui} e aruivos de projeto \texttt{.pro}.
+
+\subsection{Objetivos Específicos}
+
+% Listar os objetivos específicos
+
+Como objetivos específicos este projeto visa atingir os seguintes pontos, conforme abaixo:
+
+\begin{itemize}
+    \item Apresentar os conceitos fundamentais de IHM, usabilidade e a comunicacao com a GPU via OpenGL/Vulkan/DirectX;
+    \item Demonstrar a estrutura de loop principal do jogo e manipulacao 2D com a biblioteca Allegro 5;
+    \item Comparar e integrar o GTK e o Ogre para renderizacao;
+    \item Explicar a estrutura do QT Framework e o sistema de Signals e Slots;
+    \item Ensinar o uso do Qt Designer, o que sao os arquivos \texttt{.ui} e a integracao com o codigo C++ utilizando a ferramenta \texttt{uic};
+    \item Automatizar a compilacao de softwares em C++ utilizando arquivos de projeto \texttt{.pro}, QMake e Make.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% seção de justificativa %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Justificativa}
+
+%Justificar aqui o seu projeto.
+
+As características tal e tal da linguagem C (ou CPP se aluno de Programação 3) são de fundamental importância para se atingir a excelência e tal e coisa e tal, conforme denota \cite{Benante2008phd}.
+
+A Figura \ref{fig:graficobarra} abaixo identifica a principal razão, exposta acima, para bla bla
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.60\linewidth]{imagens/exemplo1.png}
+\caption{Exemplo de gráfico em barras}
+\label{fig:graficobarra}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% seção de metodologia %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Metodologia}
+
+% Descrever como (por quais métodos) os objetivos serão alcançados.
+
+Este projeto contará com a criação, roteiro, produção, gravação e divugação de quatro (4) vídeos tal e tal.
+
+Os videos serão divididos nos conteúdos tal e tal.
+
+A abordagem dada é tal e tal e coisa e tal.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subseção equipamentos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equipamentos Necessários}
+
+%Listar os equipamentos necessários para a implementação do projeto.
+
+Para realizar este projeto é preciso tal e tal, além de tal, e acesso à internet, e tal e tal.
+
+Além desses equipamentos, também é preciso coisa e tal.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subseção com algoritmo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Implementação}
+
+A implementação do projeto se dará de forma online, em uma \textit{playlist} numa plataforma de reprodução de videos da escolha do professor orientador, e a mesma será divulgada tanto para alunos da Escola Politécnica de Pernambuco (POLI/UPE) quanto para a comunidade em geral através dos canais de comunicação disponíveis.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% seção Plano de Trabalho %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Plano de Trabalho}
+
+% Esta seção estabelece as atividades a serem realizadas, organizadas em etapas, para depois serem alocadas na tabela na seção seguinte, cronograma.
+
+% dicas de etapas: desenvolvimento de roteiros, videos, edição, gravação.
+
+Este projeto está subdividido em XXX etapas, que contemplam ... bla bla
+e estão organizadas em ordem cronológica na Tabela \ref{tab:cronograma}.
+
+São elas:
+
+\begin{description}
+ \item[Etapa 1: Projeto.] Organização do projeto, composição das idéias, seleção de tema, discussão com membros do grupo, divisão de tarefas e atividades administrativas relevantes.
+ \item[Etapa 2: Pesquisa.] (descreva a etapa)
+ \item[Etapa 3: Conteúdo.] (descreva a etapa)
+ \item[Etapa 4: Desenvolvimento.] (descreva a etapa)
+ \item[Etapa 5: Revisão.] (descreva a etapa)
+ \item[Etapa 6: Validação.] (descreva a etapa)
+\end{description}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% seção Plano de Trabalho %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cronograma}
+
+%Em conjunto com a seção de Plano de Trabalho, a seção de cronograma coloca as atividades dispostas numa linha do tempo. Utilize uma tabela para melhor visualização.
+
+Segue abaixo o cronograma com tal e tal
+
+\begin{table}[H]
+\begin{center}
+ \caption{Tabela de Cronograma do Projeto de Extensão}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+  \hline \hline
+   \textbf{Etapas} & \textbf{Sem. 1} & \textbf{Sem. 2} & \textbf{Sem. 3} & \textbf{Sem. 4} & \textbf{Sem. 5} & \textbf{Sem. 6} \\ \hline \hline
+   1. Projeto. & X & X &  &  &  &  \\ \hline
+   2. Pesquisa. &  &  &  &  &  &  \\ \hline
+   3. Conteúdo. &  &  &  &  &  &  \\ \hline
+   4. Desenvolvimento. &  &  &  &  &  &  \\ \hline
+   5. Revisão. &  &  &  &  &  &  \\ \hline
+   6. Validação. &  &  &  &  &  &  \\ \hline \hline
+\end{tabular}
+\label{tab:cronograma}
+\end{center}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% seção de impactos alcançados %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Impactos e Transferências}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subseção de impacto científico %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Impacto Científico}
+
+Não há impacto científico relevante (N/A).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subseção de impacto tecnológico %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Impacto Tecnológico}
+
+Não há impacto tecnológico relevante (N/A).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subseção de econônimo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Impacto Econômico}
+
+Não há impacto econômico relevante (N/A).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subseção de impacto social %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Impacto Social}
+
+O projeto visa contribuir com a sociedade na forma de... bla ... bla... bla
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subseção de impacto ambiental %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Impacto Ambiental}
+
+Não há impacto ambiental relevante (N/A).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subseção de transferências %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Transferências}
+
+O ProgramAuto terá como objetivo a execução de aulas para ensinar a linguagem C aos discentes interessados. Contará com sua exposição de ensino gravada que será disponibilizada e a elaboração de relatórios a fim de cumprir com os aspectos estabelecidos no Plano de Trabalho.
+
+Este projeto, parte integrante do ProgramAuto, visa ...
+
+%O que mais o seu projeto agrega? O que é transferido? De onde vem? Para onde vai?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% seção de resultados esperados %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados Esperados}
+
+É esperado que após a execução com sucesso deste projeto,
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Autores %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Detalhamento dos Autores}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Discentes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Discentes}
+
+\begin{enumerate}
+    \item \textbf{Nome Completo:} Fulano de tal
+    \begin{description}
+        \item [Email:] \email{blabla@poli.br}
+        \item [Endereço:]
+        \item [Matrícula:]
+        \item [CPF:]
+        \item [RG:]
+        \item [Telefone:]
+        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
+    \end{description}
+
+    \item \textbf{Nome Completo:} Fulano de tal
+    \begin{description}
+        \item [Email:] \email{blabla@poli.br}
+        \item [Endereço:]
+        \item [Matrícula:]
+        \item [CPF:]
+        \item [RG:]
+        \item [Telefone:]
+        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
+    \end{description}
+
+    \item \textbf{Nome Completo:} Fulano de tal
+    \begin{description}
+        \item [Email:] \email{blabla@poli.br}
+        \item [Endereço:]
+        \item [Matrícula:]
+        \item [CPF:]
+        \item [RG:]
+        \item [Telefone:]
+        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
+    \end{description}
+
+    \item \textbf{Nome Completo:} Fulano de tal
+    \begin{description}
+        \item [Email:] \email{blabla@poli.br}
+        \item [Endereço:]
+        \item [Matrícula:]
+        \item [CPF:]
+        \item [RG:]
+        \item [Telefone:]
+        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
+    \end{description}
+
+%     \item \textbf{Nome Completo:} Fulano de tal
+%     \begin{description}
+%         \item [Email:] \email{blabla@poli.br}
+%         \item [Endereço:]
+%         \item [Matrícula:]
+%         \item [CPF:]
+%         \item [RG:]
+%         \item [Telefone:]
+%         \item [Currículo Lattes:] \url{http://lattes.cnpq.br/nnnnn}
+%     \end{description}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Docentes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Docentes}
+
+\begin{enumerate}
+    \item \textbf{Nome Completo:} Ruben Carlo Benante
+    \begin{description}
+        \item [Email:] \email{rcb@poli.br}
+        \item [Matrícula:] 11238-0
+        \item [Currículo Lattes:] \url{http://lattes.cnpq.br/3366717378277623}
+    \end{description}
+
+%     \item \textbf{Nome Completo:}
+%     \begin{description}
+%         \item [Email:] \email{no@no.no}
+%         \item [Matrícula:]
+%         \item [Currículo Lattes:]
+%     \end{description}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% referências bibliográficas %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section*{Referências Bibliográficas}
+
+% cite todos, mesmo os não referenciados %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nocite{*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% se necessario %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% troca autor and autor por autor & autor, na bibliografia. O dcu usa "and"
+%\renewcommand{\harvardand}{\&} % troca and pro &. O dcu usa "and"
+
+% Estilos de bibliografia %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \bibliographystyle{abnt-alf} % Estilo alfabético da ABNT. Opção [num] para estilo numérico
+% \bibliographystyle{apalike}
+% \bibliographystyle{dcu} %citacao como (autor and autor, ano). Parece apalike. Rev. Control. Automacao. Use com harvard
+% \bibliographystyle{agsm} % padrao harvard fica (autor & autor ano).
+\bibliographystyle{acm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% arquivo de banco de dados das referências %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% renomear para o número do exercício correto
+% o arquivo de bibliografia pode se chamar qualquer coisa, isso não muda o comando de gerar o PDF.
+% Por exemplo para 'mybiblio.bib', use \bibliography{mybiblio} e os comandos pdflatex e bibtex continuam os mesmos identicos com exN.
+\bibliography{biblio}
+
+\end{document}
